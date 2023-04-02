@@ -10,9 +10,9 @@ export default function HomePage() {
     <Page
       title="Tokengates"
       primaryAction={{
-        content: "Create tokengate",
+        content: "Create Loyality Program",
         onAction: () => {
-          navigate("/createtokengate");
+          navigate("/loyalpoints");
         },
       }}
     >
