@@ -1,13 +1,13 @@
 import { Frame, Navigation } from "@shopify/polaris";
+import React from "react";
 import {
   HomeMinor,
   GiftCardMajor,
   DiscountCodeMajor,
   DiscountsMajor,
 } from "@shopify/polaris-icons";
-import React from "react";
-import { useLocation } from "react-router-dom";
 import Routes from "../Routes";
+import { useLocation } from "react-router-dom";
 
 export function NavigationSidebar() {
 
@@ -15,7 +15,8 @@ export function NavigationSidebar() {
     const location = useLocation();
 
   return (
-    <Frame>
+    <Frame
+    navigation={
       <Navigation location={location.pathname}>
         <Navigation.Section
           items={[
@@ -35,9 +36,9 @@ export function NavigationSidebar() {
           title="Loyalty Program"
           items={[
             {
-              url: "/loyalty",
+              url: "/tokendrop",
               excludePaths: ["#"],
-              label: "TokenDrops",
+              label: "Token Drops",
               icon: GiftCardMajor,
             },
             {
@@ -49,6 +50,7 @@ export function NavigationSidebar() {
           ]}
         />
       </Navigation>
+    }>
       <Routes pages={pages} />
     </Frame>
   );
