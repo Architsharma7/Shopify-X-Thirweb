@@ -1,0 +1,16 @@
+<div
+  id="web3-com-app"
+  data-product_id="{{ product.id }}"
+  data-product_gated="{{ product.gated? }}">
+  Tokengating example app block placeholder
+</div>
+<script async type="module" src="{{ "index.js" | asset_url }}"></script>
+
+{% schema %}
+  {
+    "name": "Tokengate",
+    "target": "section",
+    "templates": ["product"],
+    "settings": []
+  }
+{% endschema %}

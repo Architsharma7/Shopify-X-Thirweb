@@ -1,0 +1,22 @@
+{
+  "name": "tokengate",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@shopify/connect-wallet": "^0.1.0",
+    "@shopify/gate-context-client": "^0.1.0",
+    "@shopify/tokengate": "^0.1.0"
+  },
+  "devDependencies": {
+    "vite": "^3.2.3",
+    "vite-plugin-node-stdlib-browser": "^0.1.1",
+    "@vitejs/plugin-react": "^2.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
