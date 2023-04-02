@@ -6,12 +6,17 @@ import {
   DiscountsMajor,
 } from "@shopify/polaris-icons";
 import React from "react";
+import { useLocation } from "react-router-dom";
+import Routes from "../Routes";
 
-function Navigation() {
+export function NavigationSidebar() {
+
+    const pages = import.meta.globEager("../pages/**/!(*.test.[jt]sx)*.([jt]sx)");  
+    const location = useLocation();
 
   return (
     <Frame>
-      <Navigation location="/">
+      <Navigation location={location.pathname}>
         <Navigation.Section
           items={[
             {
@@ -44,6 +49,7 @@ function Navigation() {
           ]}
         />
       </Navigation>
+      <Routes pages={pages} />
     </Frame>
   );
 }
