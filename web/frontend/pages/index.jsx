@@ -1,25 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { Page, Layout } from "@shopify/polaris";
 
-import { NavigationSidebar } from "../components/Navigation";
+// import { NavigationSidebar } from "../components/NavigationSidebar";
 
 export default function HomePage() {
   const navigate = useNavigate();
 
   return (
     <Page
-      title="Tokengates"
+      title="TokenGate"
       primaryAction={{
-        content: "Create Loyality Program",
+        content: "Create Token gating",
         onAction: () => {
-          navigate("/loyalpoints");
+          navigate("/createtokengate");
         },
       }}
     >
       <Layout>
-        <Layout.Section>
-          <NavigationSidebar/>
-        </Layout.Section>
+        <Layout.Section>{/* <NavigationSidebar /> */}</Layout.Section>
       </Layout>
     </Page>
   );
